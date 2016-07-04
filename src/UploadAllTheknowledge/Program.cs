@@ -29,6 +29,10 @@ namespace UploadAllTheknowledge
 
             // http://docker:9200/default-index/_search to view what's happened.
 
+            var searchResults = client.Search<Item>(s => s
+                .AllIndices());
+            Console.WriteLine(searchResults.ToString());
+
         }
     }
 }
