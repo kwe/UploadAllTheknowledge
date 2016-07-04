@@ -8,6 +8,7 @@ namespace UploadAllTheknowledge
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello kwe");
+            // running elasticsearch with : docker run -d -p 9200:9200 -p 9300:9300 elasticsearch
 
             var local = new Uri("http://docker:9200");
             var setting = new ConnectionSettings(local).DefaultIndex("default-index");
